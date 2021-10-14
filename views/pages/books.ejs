@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('../partials/head') %>
+</head>
+
+<body>
+    <header>
+        <%- include('../partials/header') %>
+    </header>
+
+    <main class="flex-space">
+        <table>
+            <% bookdetails.forEach(function(book) { %>
+                <th><h3>Name</h3></th>
+                <th><h3>Genre</h3></th>
+                <tbody>
+                    <tr>
+                        <td>
+                            <p><%= book.name %></p>
+                        </td>
+                        <td>
+                            <p><%= book.genre %></p>
+                        </td>
+                    </tr>
+                </tbody>
+            <% }); %>
+        </table>
+    </main>
+
+    <footer>
+        <%- include('../partials/footer') %>
+    </footer>
+
+</body>
+
+</html>

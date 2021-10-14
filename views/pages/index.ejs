@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('../partials/head') %>
+</head>
+
+<body>
+    <header>
+        <%- include('../partials/header') %>
+    </header>
+
+    <main class="flex-space">
+        <h2>Add Book to Database</h2>
+        <form id="addbook" action="/add" method="post">
+            <input type="text" id="input-name" name="name" placeholder="Book Title">
+            <label for="input-name">Book Name</label>
+            <input type="text" id="input-genre" name="genre" placeholder="Book Genre">
+            <label for="input-genre">Book Genre</label>
+            <button type="submit" value="Add">
+                Add Book
+                <i class="las la-plus"></i>
+            </button>
+        </form>
+
+        <h2>Delete Book From Database</h2>
+        <form id="deletebook" action="/delete" method="post">
+            <input type="text" id="input-name" name="name" placeholder="Book Title">
+            <label for="input-name">Book Name</label>
+            <button type="submit" value="Delete">
+                Delete Book
+                <i class="las la-times"></i>
+            </button>
+        </form>
+
+        <h2>Edit A Book in the Database</h2>
+        <form id="editbook" action="/edit" method="post">
+            <input type="text" id="input-editname" name="editname" placeholder="Old Book Name">
+            <input type="text" id="input-newname" name="newname" placeholder="New Book Name">
+            <button type="submit" value="Edit">
+                Edit Book
+                <i class="las la-minus"></i>
+            </button>
+        </form>
+    </main>
+
+    <footer>
+        <%- include('../partials/footer') %>
+    </footer>
+
+</body>
+</html>
